@@ -1,9 +1,10 @@
 from app import db
+from datetime import datetime
 
 class Divvy(db.Model):
     trip_id = db.Column(db.Integer, primary_key = True)
-    starttime = db.Column(db.String(150), nullable = False)
-    stoptime = db.Column(db.String(150), nullable = False)
+    starttime = db.Column(db.DateTime(), nullable = False)
+    stoptime = db.Column(db.DateTime(), nullable = False)
     bikeid = db.Column(db.Integer, nullable = False)
     from_station_id = db.Column(db.Integer, nullable = False)
     from_station_name = db.Column(db.String, nullable = False)
